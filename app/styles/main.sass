@@ -1,0 +1,509 @@
+@import "_sprite"
+@font-face
+  font-family: 'Proxima Nova Semibold'
+  src: url(../fonts/ProximaNovaSemibold.otf)
+@font-face
+  font-family: 'Proxima Nova Bold'
+  src: url(../fonts/ProximaNovaBold.otf)
+
+@font-face
+  font-family: 'Proxima Nova Regular'
+  src: url(../fonts/ProximaNovaRegular.otf)
+@font-face
+  font-family: 'BrandonBold'
+  src: url(../fonts/Brandon_bld.otf)
+@font-face
+  font-family: 'TrajanPro-Bold'
+  src: url(../fonts/TrajanPro-Bold.otf)
+@font-face
+  font-family: 'TrajanPro-Regular'
+  src: url(../fonts/TrajanPro-Regular.otf)
+
+*
+  -moz-transition: color 0.2s ease
+  -webkit-transition: color 0.2s ease
+  -ms-transition: color 0.2s ease
+  transition: color 0.2s ease
+
+html, body
+  margin: 0
+  padding: 0
+  border: 0
+  vertical-align: baseline
+
+*
+  box-sizing: border-box
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section
+  display: block
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+html, body
+  height: 100%
+body
+  font-size: 14px
+  color: #1e1e1e
+  font-family: 'Proxima Nova Regular', sans-serif
+.header-top
+  padding: 20px 32px 0 32px
+.b-contact-container
+  & a:link,
+  & a:visited,
+  & a:hover,
+  & a:active
+    color: #1e1e1e
+    font-size: 14px
+    text-decoration: none
+    font-family: 'Proxima Nova Semibold', sans-serif
+    margin-right: 19px
+  & span.time
+    color: #9c9c9c
+    font-size: 12px
+    font-family: 'Proxima Nova Semibold', sans-serif
+.navbar
+  margin-bottom: 0
+.navbar-default
+  background-color: #ffffff
+  border: none
+  border-top: 1px solid #f2f2f2
+.navbar-default .navbar-toggle
+  border: none
+.nav>li>a
+  padding: 20px 27px
+.navbar-nav>li>a:link,
+.navbar-nav>li>a:visited,
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:active
+  text-transform: uppercase
+  color: #1e1e1e
+  font-size: 13px
+  font-family: 'Proxima Nova Bold', sans-serif
+.navbar-toggle .icon-bar
+  height: 3px
+  width: 25px
+.navbar-form
+  margin: 13px -15px 0
+#navbar-collapse
+  padding: 0
+.search
+  @include sprite($search)
+span.btn-text
+  font-size: 20px!important
+  font-style: normal
+  padding: 0 20px!important
+  line-height: 50px!important
+.btn
+  background-color: transparent
+#menu-top
+  list-style: none
+  padding: 0
+  margin: 0
+  & li
+    display: inline-block
+    & a:link,
+    & a:visited
+      padding: 0 15px
+      color: #9c9c9c
+      font-size: 10px
+      text-decoration: none
+      text-transform: uppercase
+      font-family: 'Proxima Nova Semibold', sans-serif
+    & a:hover,
+    & a:active
+      text-decoration: underline
+.b-login__link
+  &:link,
+  &:visited
+    padding: 0 15px
+    color: #9c9c9c
+    font-size: 10px
+    text-decoration: none
+    text-transform: uppercase
+    font-family: 'Proxima Nova Semibold', sans-serif
+  &:hover,
+  &:active
+    text-decoration: underline
+.b-login, .b-shopping-basket
+  display: inline-block
+.cart-contents,
+.cart-contents:link,
+.cart-contents:visited
+  color: #1e1e1e
+  text-decoration: none
+.cart-contents:hover,
+.cart-contents:active
+  text-decoration: underline
+.basket
+  @include sprite($basket)
+  margin-right: 7px
+  position: relative
+  top: 2px
+.site-logo
+  font-size: 24px
+  font-family: 'BrandonBold', sans-serif
+  padding: 35px 0
+  text-transform: uppercase
+  & a:link,
+  & a:visited,
+  & a:hover,
+  & a:active
+    color: #1e1e1e
+    text-decoration: none
+#carousel
+  width: 100%
+  position: relative
+  overflow: hidden
+  & ul
+    margin: 0
+    padding: 0
+    list-style: none
+    display: block
+    width: 100%
+    & li
+      width: 100%
+      display: block
+      float: left
+      position: relative
+      & img
+        height: auto
+        max-width: 100%
+        width: 100%
+#carousel .pager
+  padding-right: 20px
+  position: absolute
+  top: 42px
+  right: 32px
+#carousel .pager a
+  display: block
+  margin: 0 30px 11px 0
+  color: #dddddd
+  text-decoration: none
+  width: 9px
+  height: 9px
+  border-radius: 100%
+  border: 3px solid #ffffff
+  background-color: transparent
+  text-indent: -999em
+
+#carousel .pager a.selected
+  background-color: #ffffff
+a#next
+  position: absolute
+  bottom: 50%
+  right: 65px
+  & .i-box
+    border: 1px solid #ffffff
+    background-color: #ffffff
+  & .i-arrow
+    @include sprite($arrow)
+    margin-top: 14px
+  & a:hover
+    & .i-box
+      background-color: #a27c5d
+      transition: 0.5s
+      border: 1px solid #bf9b7c
+.b-details__box
+  border-radius: 100%
+  width: 110px
+  height: 110px
+  text-align: center
+  background-color: #ffffff
+  border: 1px solid #ffffff
+  position: absolute
+  bottom: 30px
+  right: 32px
+  & .b-details__link
+    display: block
+    margin-top: 45px
+    color: #c59a77
+    font-size: 12px
+    text-decoration: none
+    text-transform: uppercase
+  &:hover
+    background-color: #a27c5d
+    transition: 0.5s
+    border: 1px solid #bf9b7c
+    & .b-details__link
+      color: #ffffff
+
+.i-box
+  height: 40px
+  width: 40px
+  border-radius: 100%
+  position: relative
+  text-align: center
+  box-shadow: 0 4px 3px 0 rgba(215, 215, 215, 0.9)
+.b-banner-content
+  min-height: 194px
+  & a
+    display: inline-block
+  & p
+    font-size: 18px
+    font-family: 'Proxima Nova Bold', sans-serif
+    padding-bottom: 50px
+  & .i-box
+    box-shadow: none
+
+.b-banner1
+  background: url("../images/banner1.jpg") no-repeat top center
+  background-size: cover
+  & p
+    color: #c59a77
+  & .i-box
+    border: 1px solid #433830
+    background-color: #1f1f1f
+  & .i-arrow
+    @include sprite($arrow-dark)
+    margin-top: 14px
+  & a:hover
+    & .i-box
+      background-color: #c59a77
+      transition: 0.5s
+
+.b-banner2
+  background: url("../images/banner2.jpg")no-repeat top center
+  background-size: cover
+  & p
+    color: #1e1e1e
+  & .i-box
+    border: 1px solid #1e1e1e
+    background-color: #1e1e1e
+  & .i-arrow
+    @include sprite($arrow-grey)
+    margin-top: 14px
+  & a:hover
+    & .i-box
+      background-color: #949ba3
+      transition: 0.5s
+      border: 1px solid #7e8389
+
+.b-banner3
+  background: url("../images/banner3.jpg")no-repeat top center
+  background-size: cover
+  & p
+    color: #ffffff
+  & .i-box
+    border: 1px solid #ffffff
+    background-color: #ffffff
+  & .i-arrow
+    @include sprite($arrow)
+    margin-top: 14px
+  & a:hover
+    & .i-box
+      background-color: #a27c5d
+      transition: 0.5s
+      border: 1px solid #bf9b7c
+
+.b-product
+  border: 1px solid #e5e5e5
+  border-right: none
+  border-bottom: none
+  min-height: 298px
+  position: relative
+  background-color: #ffffff
+  &:hover
+    background-color: #f6f0eb
+
+.b-product__content
+  color: #7f7f7f
+  font-size: 12px
+  font-family: 'Proxima Nova Semibold', sans-serif
+.b-product__description-wrapper
+  width: 33%
+  display: inline-block
+.b-short-description
+  margin-bottom: 50px
+  & p
+    margin-bottom: 15px
+.b-price
+  font-size: 18px
+  position: absolute
+  bottom: 30px
+  text-transform: uppercase
+.b-product__img-wrapper
+  display: inline-block
+  text-align: center
+  vertical-align: top
+  width: 66%
+  padding-top: 20px
+  & img
+    display: inline-block
+.b-product__title
+  margin-top: 0
+  margin-bottom: 15px
+  text-transform: uppercase
+  & a, & a:link, & a:visited
+    color: #1e1e1e
+    font-size: 18px
+    font-family: 'Proxima Nova Bold', sans-serif
+    text-decoration: none
+    margin-bottom: 9px
+  & a:hover, & a:active
+    color: #1e1e1e
+    text-decoration: underline
+
+.b-bascket-btn
+  display: inline-block
+  position: absolute
+  bottom: 30px
+  right: 30px
+
+.icon
+  display: inline-block
+.basket-btn
+  @include sprite($basket-brown)
+  margin-top: 13px
+.b-product:hover
+  & .i-box
+    background-color: #c59a77
+    transition: 0.5s
+  & .basket-btn
+    @include sprite($basket-w)
+    background-position: -47px 0
+
+.b-promo-box
+  min-height: 302px
+  background: url("../images/bg-girl.jpg") no-repeat top center
+  background-size: cover
+.b-promo__content
+  padding: 30px 0 0 20px
+  max-width: 345px
+.b-footer
+  color: #8e8e8e
+  font-size: 12px
+  font-family: 'Proxima Nova Semibold', sans-serif
+  background-color: #1e1e1e
+  padding-top: 30px
+  padding-bottom: 95px
+  & a, & a:link, & a:visited
+    display: block
+    color: #8e8e8e
+    text-decoration: none
+    margin-bottom: 9px
+  & a:hover, & a:active
+    color: #8e8e8e
+    text-decoration: underline
+.b-footer-title
+  color: #ffffff
+  font-size: 18px
+  font-family: 'Proxima Nova Bold', sans-serif
+.b-footer-nav
+  list-style: none
+  padding: 0
+  margin: 0
+.b-footer-block
+  min-height: 95px
+.b-social-list
+  list-style: none
+  padding: 0
+  & li
+    display: inline-block
+    margin-right: 10px
+  & .i-box
+    box-shadow: none
+    vertical-align: top
+    background-color: #c59a77
+    &:hover
+      transition: 0.5s
+      background-color: #b58b6b
+  & .icon
+    position: absolute
+    top: 50%
+    left: 50%
+  & .instagram
+    @include sprite($instagram)
+    margin-top: -9px
+    margin-left: -9px
+  & .vk
+    @include sprite($vk)
+    margin-top: -6px
+    margin-left: -11px
+  & .fb
+    @include sprite($fb)
+    margin-top: -8px
+    margin-left: -4px
+.b-footer
+  padding-bottom: 55px
+
+.b-product-flex-wrapper
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-content: flex-start
+.b-product-flex
+  width: 33%
+  flex-grow: 1
+.b-product-flex.b-promo-box
+  width: 66.3%
+@media (max-width: 767px)
+  .header-top
+    padding: 20px 0 0
+  #menu-top
+    & li
+      margin: 10px 0
+      & a:link,
+      & a:visited
+        padding: 10px 15px
+  .b-contact-container, .b-login-container
+    text-align: center
+  .b-login-container
+    margin: 10px 0
+  .b-contact-container
+    padding: 10px 0
+  .site-logo
+    padding: 20px 0
+  #carousel .pager
+    right: -9px
+    top: -5px
+    padding: 0
+  .b-product
+    padding: 15px 0 15px 16px
+  .b-short-description
+    margin-bottom: 30px
+  .b-price
+    bottom: 15px
+  .b-bascket-btn
+    bottom: 15px
+    right: 15px
+  .nav > li > a
+    padding: 8px 36px
+  a#next
+    position: absolute
+    bottom: 6px
+    right: 6px
+  //.b-promo-box
+  //  background-position: center right
+  .b-details__box
+    width: 92px
+    height: 24px
+    bottom: 14px
+    left: 170px
+  .b-details__box .b-details__link
+    margin-top: 4px
+  .b-banner-content
+    padding: 30px 0 32px 0
+  .b-product-flex
+    width: 50%
+  .b-product-flex.b-promo-box
+    width: 100%
+@media (max-width: 600px)
+  .b-product-flex
+    width: 100%
+  .b-product-flex.b-promo-box
+    width: 100%
+@media (min-width: 768px)
+  .b-footer
+    padding-left: 25px
+  .b-banner-content
+    padding: 30px 0 32px 10px
+  .b-product
+    padding: 30px 0 30px 25px
+@media (min-width: 992px)
+  .b-banner-content
+    padding: 30px 0 32px 25px
+  .b-product
+    padding: 30px 0 30px 40px

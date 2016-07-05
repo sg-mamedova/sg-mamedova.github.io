@@ -1,0 +1,397 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title LovelyShops
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    link(href='./css/vendor.bundle.css', rel="stylesheet")
+    link(href='css/bundle.css', rel='stylesheet')
+    <!--[if IE 8]>
+    <link href='css/ie-fix.css' rel='stylesheet'>
+    <![endif]-->
+  body
+    html
+      body
+        header.site-header
+          // Site's Header
+          .header-top
+            // Header top section
+            .container-fluid
+              .row
+                .b-contact-container.col-md-3.col-sm-3.col-xs-12
+                  a(href="tel:+84957486261") 8 495 748 62 61
+                  br.visible-sm.hidden-xs
+                  span.time Пн-Пт с 10 до 20
+                .top-nav-container.col-md-6.col-sm-6.col-xs-12.text-center
+                  nav.header-top-nav
+                   .menu-top-container
+                     ul#menu-top.menu
+                       li.menu-item
+                         a(href='http://dash.themes.zone/my-account/', itemprop='url') Главная
+                       li.menu-item
+                         a(href='http://dash.themes.zone/checkout/', itemprop='url') Доставка и оплата
+                       li.menu-item
+                         a(href='http://dash.themes.zone/shop/', itemprop='url') Скидки
+                       li.menu-item
+                         a(href='http://dash.themes.zone/shop/', itemprop='url') Гарантии
+                       li.menu-item
+                         a(href='#') Консультации
+                .b-login-container.col-md-3.col-sm-3.col-xs-12.text-right
+                  .b-login
+                    // Log In
+                    a.b-login__link(href='#')
+                     | Войти на сайт
+                  .b-shopping-basket
+                    a.cart-contents
+                      i(class="icon basket")
+                      span.count 2
+          // end of Header top section
+          .logo-wrapper
+            // Logo
+            .container-fluid
+              .row
+                .site-logo.col-lg-12.col-md-12.col-sm-12.text-center
+                  a(href='http://lovelyshops.com/', title='Lovely Shops') Lovelyshops.com
+
+          .header-primary-nav
+            // Primary nav
+            .container-fluid
+              .row
+                nav.primary-nav.col-md-12.col-sm-12
+                nav.navbar.navbar-default
+                  .container-fluid
+                    // Brand and toggle get grouped for better mobile display
+                    .navbar-header
+                      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                      span.btn-text.visible-xs Menu
+                    // Collect the nav links, forms, and other content for toggling
+                    #navbar-collapse.collapse.navbar-collapse
+                      ul.nav.navbar-nav
+                        li
+                          a(href='#') Бренды
+                        li
+                          a(href='#') Для волос
+                        li
+                          a(href='#') Для лица
+                        li
+                          a(href='#') Для рук
+                        li
+                          a(href='#') Для ног
+                        li
+                          a(href='#') Для тела
+                        li
+                          a(href='#') Аксессуары
+                        li
+                          a(href='#') Парфюмерия
+                        li
+                          a(href='#') Для мужчин
+                      form.navbar-form(role='search')
+                        .form-group
+                          input.hidden.form-control(type='text', placeholder='Search')
+                        button.btn(type='submit')
+                          i(class="icon search")
+          // end of Primary nav
+        main.b-main
+          .container-fluid
+            .row
+              .b-banner__box
+                .b-banner__box-wrapper#carousel
+                  ul.b-banner__list
+                    li.b-banner_list-item
+                      a(href='#')
+                        img(src='images/main-banner.jpg', alt='')
+                      .b-details__box
+                        a(href='#').b-details__link Подробнее
+                    li.b-banner_list-item
+                      a(href='#')
+                        img(src='images/main-banner.jpg', alt='')
+                      .b-details__box
+                        a(href='#').b-details__link Подробнее
+                    li.b-banner_list-item
+                      a(href='#')
+                        img(src='images/main-banner.jpg', alt='')
+                      .b-details__box
+                        a(href='#').b-details__link Подробнее
+                  //a(id="prev", class="prev", href="#")
+                  //  .i-box
+                  //    i(class="icon i-arrow")
+                  a(id="next", class="next", href="#")
+                    .i-box
+                      i(class="icon i-arrow")
+                  #pager.pager
+              .col-sm-4.col-xs-12.b-banner1
+                .b-banner1-content.b-banner-content
+                  p
+                    | Популярные
+                    br
+                    | бренды
+                  a(href='#')
+                    .i-box
+                      i(class="icon i-arrow")
+              .col-sm-4.col-xs-12.b-banner2
+                .b-banner2-content.b-banner-content
+                  p
+                    | Уход за
+                    br
+                    | волосами
+                  a(href='#')
+                    .i-box
+                      i(class="icon i-arrow")
+              .col-sm-4.col-xs-12.b-banner3
+                .b-banner3-content.b-banner-content
+                  p
+                    | Товары для
+                    br
+                    | мужчин
+                  a(href='#')
+                    .i-box
+                      i(class="icon i-arrow")
+              .clearfix
+              .b-product-flex-wrapper
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Cloud Nine Touch
+                      .b-short-description
+                        p Сенсорный стайлер для выпрямления волос
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product1.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Charge Up Thickening Shampoo
+                      .b-short-description
+                        p Шампунь для нормальных и тонких волос, 250 мл
+                      span.b-price 8 650 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product2.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | The activator density and density
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product3.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Cloud Nine Touch
+                      .b-short-description
+                        p Сенсорный стайлер для выпрямления волос
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product4.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Charge Up Thickening Shampoo
+                      .b-short-description
+                        p Шампунь для нормальных и тонких волос, 250 мл
+                      span.b-price 4 450 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product5.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | The activator density and density
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 10 560 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product6.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | The activator density and density
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product7.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Cloud Nine Touch
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product8.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | The activator density and density
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product9.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-product.b-product-flex
+                  .b-product__content
+                    .b-product__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | The activator density and density
+                      .b-short-description
+                        p Активатор густоты и плотности волос DENSIFIQUE для женщин
+                      span.b-price 13 216 руб
+                    .b-product__img-wrapper
+                      img.img-responsive(src='images/product10.png', alt='')
+                    .b-bascket-btn
+                      a(href='#')
+                        .i-box
+                          i(class="icon basket-btn")
+                .b-promo-box.b-product-flex
+                  .b-promo__content
+                    .b-promo__description-wrapper
+                      h3.b-product__title
+                        a.b-product__title-link(href='#')
+                          | Интернет-магазин профессиональной косметики
+                      .b-short-description
+                        p
+                          | Дорогой посетитель, мы рады пригласить
+                          br.hidden-xs
+                          | Вас в прекрасный мир высококачественной
+                          br.hidden-xs
+                          | и профессиональной косметики!
+                        p На просторах нашего магазина вас ждет обширный выбор продукции для лица, тела, рук, ногтей, волос, различные эксклюзивные обертывания.
+
+        footer.b-footer
+          .container-fluid
+            .row
+              .col-xs-6.col-sm-2.b-footer-block
+                .b-copyright
+                  p
+                    | @ 2010-2016
+                    br
+                    | Интернет-магазин
+                    br
+                    | профессиональной
+                    br
+                    | косметики.
+                    br
+                    | Все права защищены.
+              .col-xs-6.col-sm-2.b-footer-block
+                p.b-footer-title О нас
+                ul.b-footer-nav
+                  li
+                    a(href='#') О магазине
+                  li
+                    a(href='#') Контакты
+              .col-xs-6.col-sm-2.b-footer-block
+                p.b-footer-title Помощь
+                ul.b-footer-nav
+                  li
+                    a(href='#') Доставка и оплата
+                  li
+                    a(href='#') Статус заказа
+                  li
+                    a(href='#') Консультации
+                  li
+                    a(href='#') Скидки
+                  li
+                    a(href='#') Оптовым покупателям
+              .col-xs-6.col-sm-2.b-footer-block
+                p.b-footer-title Информация
+                ul.b-footer-nav
+                  li
+                    a(href='#') Подлинность продукции
+                  li
+                    a(href='#') Конфиденциальность
+                  li
+                    a(href='#') Договор оферты
+                  li
+                    a(href='#') Правила продажи
+                  li
+                    a(href='#') Поставщикам
+              .col-xs-6.col-sm-2.b-footer-block
+                p.b-footer-title Партнеры
+                a(href='#').b-parthner__link
+                  img.img-responsive(src='images/logo.png', alt='')
+                a(href='#')
+                  | Подарочные
+                  br
+                  |сертификаты
+              .col-xs-6.col-sm-2.b-footer-block
+                p.b-footer-title Мы в соцсетях
+                ul.b-social-list
+                  li
+                    a.b-inst(href='#')
+                      .i-box
+                        i(class="icon instagram")
+                  li
+                    a.b-vk(href='#')
+                      .i-box
+                        i(class="icon vk")
+                  li
+                    a.b-fb(href='#')
+                      .i-box
+                        i(class="icon fb")
+
+
+        script(src='js/vendor.bundle.js')
+        script(src="js/bundle.js")
+
