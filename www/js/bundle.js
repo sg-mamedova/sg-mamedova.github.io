@@ -1,0 +1,1 @@
+$(function(){$("#carousel ul").carouFredSel({width:"100%",items:{visible:1,start:-1},scroll:{items:1,duration:1500,timeoutDuration:4e3},pagination:"#pager",auto:!0,swipe:{onTouch:!0,onMouse:!0},pauseOnHover:!0,align:"center",responsive:!0,next:"#next"})});
