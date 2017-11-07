@@ -5,19 +5,13 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title LovelyShops
-    link(href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
     link(href='./css/vendor.bundle.css', rel="stylesheet")
     link(href='css/bundle.css', rel='stylesheet')
-    <!--[if IE 8]>
-    <link href='css/ie-fix.css' rel='stylesheet'>
-    <![endif]-->
   body
     html
       body
         header.site-header
-          // Site's Header
           .header-top
-            // Header top section
             .container-fluid
               .row
                 .b-contact-container.col-md-3.col-sm-3.col-xs-12
@@ -47,22 +41,18 @@ html(lang='en')
                     a.cart-contents
                       i(class="icon basket")
                       span.count 2
-          // end of Header top section
           .logo-wrapper
-            // Logo
             .container-fluid
               .row
                 .site-logo.col-lg-12.col-md-12.col-sm-12.text-center
                   a(href='http://lovelyshops.com/', title='Lovely Shops') Lovelyshops.com
 
           .header-primary-nav
-            // Primary nav
             .container-fluid
               .row
                 nav.primary-nav.col-md-12.col-sm-12
                 nav.navbar.navbar-default
                   .container-fluid
-                    // Brand and toggle get grouped for better mobile display
                     .navbar-header
                       button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
                         span.sr-only Toggle navigation
@@ -70,7 +60,6 @@ html(lang='en')
                         span.icon-bar
                         span.icon-bar
                       span.btn-text.visible-xs Menu
-                    // Collect the nav links, forms, and other content for toggling
                     #navbar-collapse.collapse.navbar-collapse
                       ul.nav.navbar-nav
                         li
@@ -96,35 +85,27 @@ html(lang='en')
                           input.hidden.form-control(type='text', placeholder='Search')
                         button.btn(type='submit')
                           i(class="icon search")
-          // end of Primary nav
         main.b-main
           .container-fluid
             .row
               .b-banner__box
                 .b-banner__box-wrapper#carousel
                   ul.b-banner__list
-                    li.b-banner_list-item
+                    li
                       a(href='#')
                         img(src='images/main-banner.jpg', alt='')
                       .b-details__box
                         a(href='#').b-details__link Подробнее
-                    li.b-banner_list-item
+                    li
                       a(href='#')
                         img(src='images/main-banner.jpg', alt='')
                       .b-details__box
                         a(href='#').b-details__link Подробнее
-                    li.b-banner_list-item
+                    li
                       a(href='#')
                         img(src='images/main-banner.jpg', alt='')
                       .b-details__box
                         a(href='#').b-details__link Подробнее
-                  //a(id="prev", class="prev", href="#")
-                  //  .i-box
-                  //    i(class="icon i-arrow")
-                  a(id="next", class="next", href="#")
-                    .i-box
-                      i(class="icon i-arrow")
-                  #pager.pager
               .col-sm-4.col-xs-12.b-banner1
                 .b-banner1-content.b-banner-content
                   p

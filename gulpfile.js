@@ -44,7 +44,6 @@ function isUglify() {
 gulp.task('default', [
   'scripts',
   'styles',
-  'ie-styles',
   'fonts',
   'images',
   'templates',
@@ -67,7 +66,7 @@ gulp.task('watch', function() {
  */
 gulp.task('scripts', function(done) {
   gulp.src(path.app.scripts)
-    .pipe(gulpif(isUglify(), uglify()))
+    //.pipe(gulpif(isUglify(), uglify()))
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest(path.public.scripts))
     .on('error', function(err){
@@ -81,10 +80,10 @@ gulp.task('scripts', function(done) {
 gulp.task('vendor-scripts', function(done) {
   gulp.src([
       './node_modules/jquery/dist/jquery.js',
-      './node_modules/carouFredSel/jquery.carouFredSel-6.2.1.js',
-      './node_modules/bootstrap/dist/js/bootstrap.js',
+      './node_modules/slick-carousel/slick/slick.js',
+      './node_modules/bootstrap/dist/js/bootstrap.js'
     ])
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(concat('vendor.bundle.js'))
     .pipe(gulp.dest(path.public.scripts))
     .on('error', function(err){
@@ -125,25 +124,14 @@ gulp.task('styles', ['sprite'], function(done) {
     .on('error', sass.logError)
     .on('end', done);
 });
-/**
- * build ie-styles
- */
-gulp.task('ie-styles', function(done) {
-  gulp.src('app/styles/ie-fix.sass')
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(gulpif(isUglify(), cssNano()))
-    .pipe(gulp.dest(path.public.styles))
-    .on('error', sass.logError)
-    .on('end', done);
-});
+
 /**
  * build vendor css
  */
 gulp.task('vendor-css', function(done) {
   gulp.src([
-      './node_modules/bootstrap/dist/css/bootstrap.css'
+      './node_modules/bootstrap/dist/css/bootstrap.css',
+      './node_modules/slick-carousel/slick/slick.css'
     ])
     .pipe(cssNano())
     .pipe(concat('vendor.bundle.css'))

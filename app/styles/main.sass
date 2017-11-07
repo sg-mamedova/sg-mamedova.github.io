@@ -1,11 +1,11 @@
 @import "_sprite"
+@import url('https://fonts.googleapis.com/css?family=400,700&subset=latin,latin-ext')
 @font-face
   font-family: 'Proxima Nova Semibold'
   src: url(../fonts/ProximaNovaSemibold.otf)
 @font-face
   font-family: 'Proxima Nova Bold'
   src: url(../fonts/ProximaNovaBold.otf)
-
 @font-face
   font-family: 'Proxima Nova Regular'
   src: url(../fonts/ProximaNovaRegular.otf)
@@ -72,16 +72,21 @@ body
   border-top: 1px solid #f2f2f2
 .navbar-default .navbar-toggle
   border: none
-.nav>li>a
-  padding: 20px 27px
+.nav>li>a,
 .navbar-nav>li>a:link,
 .navbar-nav>li>a:visited,
 .navbar-nav>li>a:hover,
 .navbar-nav>li>a:active
+  padding: 20px 27px
+  line-height: 1.2em
   text-transform: uppercase
   color: #1e1e1e
   font-size: 13px
   font-family: 'Proxima Nova Bold', sans-serif
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:active
+  color: #1e1e1e
+  text-decoration: underline
 .navbar-toggle .icon-bar
   height: 3px
   width: 25px
@@ -133,10 +138,14 @@ span.btn-text
 .cart-contents:link,
 .cart-contents:visited
   color: #1e1e1e
+  cursor: pointer
   text-decoration: none
 .cart-contents:hover,
 .cart-contents:active
-  text-decoration: underline
+  text-decoration: none
+  cursor: pointer
+.slick-prev
+  display: none!important
 .basket
   @include sprite($basket)
   margin-right: 7px
@@ -157,7 +166,7 @@ span.btn-text
   width: 100%
   position: relative
   overflow: hidden
-  & ul
+  &>ul
     margin: 0
     padding: 0
     list-style: none
@@ -172,25 +181,29 @@ span.btn-text
         height: auto
         max-width: 100%
         width: 100%
-#carousel .pager
-  padding-right: 20px
-  position: absolute
-  top: 42px
-  right: 32px
-#carousel .pager a
-  display: block
-  margin: 0 30px 11px 0
-  color: #dddddd
-  text-decoration: none
-  width: 9px
-  height: 9px
-  border-radius: 100%
-  border: 3px solid #ffffff
-  background-color: transparent
-  text-indent: -999em
-
-#carousel .pager a.selected
-  background-color: #ffffff
+#carousel
+  .slick-dots
+    padding-right: 20px
+    position: absolute
+    top: 42px
+    right: 32px
+    button
+      display: block
+      margin: 0 30px 11px 0
+      color: #dddddd
+      text-decoration: none
+      width: 9px
+      height: 9px
+      border-radius: 100%
+      border: 3px solid #ffffff
+      background-color: transparent
+      text-indent: -999em
+      padding: 0
+    li
+      width: auto
+      float: none
+      &.slick-active button
+        background-color: #ffffff
 a#next
   position: absolute
   bottom: 50%
@@ -363,7 +376,7 @@ a#next
     transition: 0.5s
   & .basket-btn
     @include sprite($basket-w)
-    background-position: -47px 0
+    background-position: -48px 0
 
 .b-promo-box
   min-height: 302px
@@ -456,9 +469,9 @@ a#next
     padding: 10px 0
   .site-logo
     padding: 20px 0
-  #carousel .pager
+  #carousel .slick-dots
     right: -9px
-    top: -5px
+    top: 20px
     padding: 0
   .b-product
     padding: 15px 0 15px 16px

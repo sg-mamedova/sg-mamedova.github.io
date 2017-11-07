@@ -78,7 +78,5 @@ crashlytics-build.properties
 
 /**/*.psd
 
-/www
-
 /node_modules
 

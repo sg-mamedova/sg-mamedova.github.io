@@ -23,38 +23,7 @@
   .b-product-flex.b-promo-box {
     width: 100%; } }
 
-/*
-  SASS variables are information about icon's compiled state, stored under its original file name
-
-  .icon-home
-    width: $icon-home-width
-
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
-
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
-/*
-  The provided mixins are intended to be used with the array-like variables
-
-  .icon-home
-    @include sprite-width($icon-home)
-
-  .icon-email
-    @include sprite($icon-email)
-
-  Example usage in HTML:
-    `display: block` sprite:
-    <div class="icon-home"></div>
-
-  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class: */
-/*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
-
-  @include sprites($spritesheet-sprites)
-  */
+@import url("https://fonts.googleapis.com/css?family=400,700&subset=latin,latin-ext");
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url(../fonts/ProximaNovaSemibold.otf); }
@@ -80,7 +49,6 @@
   src: url(../fonts/TrajanPro-Regular.otf); }
 
 * {
-  -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease; }
 
 html, body {
@@ -137,17 +105,22 @@ body {
 .navbar-default .navbar-toggle {
   border: none; }
 
-.nav > li > a {
-  padding: 20px 27px; }
-
+.nav > li > a,
 .navbar-nav > li > a:link,
 .navbar-nav > li > a:visited,
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:active {
+  padding: 20px 27px;
+  line-height: 1.2em;
   text-transform: uppercase;
   color: #1e1e1e;
   font-size: 13px;
   font-family: 'Proxima Nova Bold', sans-serif; }
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:active {
+  color: #1e1e1e;
+  text-decoration: underline; }
 
 .navbar-toggle .icon-bar {
   height: 3px;
@@ -210,11 +183,16 @@ span.btn-text {
 .cart-contents:link,
 .cart-contents:visited {
   color: #1e1e1e;
+  cursor: pointer;
   text-decoration: none; }
 
 .cart-contents:hover,
 .cart-contents:active {
-  text-decoration: underline; }
+  text-decoration: none;
+  cursor: pointer; }
+
+.slick-prev {
+  display: none !important; }
 
 .basket {
   background-image: url(sprite.png);
@@ -241,42 +219,44 @@ span.btn-text {
   width: 100%;
   position: relative;
   overflow: hidden; }
-  #carousel ul {
+  #carousel > ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: block;
     width: 100%; }
-    #carousel ul li {
+    #carousel > ul li {
       width: 100%;
       display: block;
       float: left;
       position: relative; }
-      #carousel ul li img {
+      #carousel > ul li img {
         height: auto;
         max-width: 100%;
         width: 100%; }
 
-#carousel .pager {
+#carousel .slick-dots {
   padding-right: 20px;
   position: absolute;
   top: 42px;
   right: 32px; }
-
-#carousel .pager a {
-  display: block;
-  margin: 0 30px 11px 0;
-  color: #dddddd;
-  text-decoration: none;
-  width: 9px;
-  height: 9px;
-  border-radius: 100%;
-  border: 3px solid #ffffff;
-  background-color: transparent;
-  text-indent: -999em; }
-
-#carousel .pager a.selected {
-  background-color: #ffffff; }
+  #carousel .slick-dots button {
+    display: block;
+    margin: 0 30px 11px 0;
+    color: #dddddd;
+    text-decoration: none;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    text-indent: -999em;
+    padding: 0; }
+  #carousel .slick-dots li {
+    width: auto;
+    float: none; }
+    #carousel .slick-dots li.slick-active button {
+      background-color: #ffffff; }
 
 a#next {
   position: absolute;
@@ -293,7 +273,6 @@ a#next {
     margin-top: 14px; }
   a#next a:hover .i-box {
     background-color: #a27c5d;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     border: 1px solid #bf9b7c; }
 
@@ -316,7 +295,6 @@ a#next {
     text-transform: uppercase; }
   .b-details__box:hover {
     background-color: #a27c5d;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     border: 1px solid #bf9b7c; }
     .b-details__box:hover .b-details__link {
@@ -357,7 +335,6 @@ a#next {
     margin-top: 14px; }
   .b-banner1 a:hover .i-box {
     background-color: #c59a77;
-    -webkit-transition: 0.5s;
     transition: 0.5s; }
 
 .b-banner2 {
@@ -376,7 +353,6 @@ a#next {
     margin-top: 14px; }
   .b-banner2 a:hover .i-box {
     background-color: #949ba3;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     border: 1px solid #7e8389; }
 
@@ -396,7 +372,6 @@ a#next {
     margin-top: 14px; }
   .b-banner3 a:hover .i-box {
     background-color: #a27c5d;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     border: 1px solid #bf9b7c; }
 
@@ -471,7 +446,6 @@ a#next {
 
 .b-product:hover .i-box {
   background-color: #c59a77;
-  -webkit-transition: 0.5s;
   transition: 0.5s; }
 
 .b-product:hover .basket-btn {
@@ -479,7 +453,7 @@ a#next {
   background-position: -48px 0px;
   width: 14px;
   height: 16px;
-  background-position: -47px 0; }
+  background-position: -48px 0; }
 
 .b-promo-box {
   min-height: 302px;
@@ -530,7 +504,6 @@ a#next {
     vertical-align: top;
     background-color: #c59a77; }
     .b-social-list .i-box:hover {
-      -webkit-transition: 0.5s;
       transition: 0.5s;
       background-color: #b58b6b; }
   .b-social-list .icon {
@@ -566,8 +539,10 @@ a#next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -599,9 +574,9 @@ a#next {
     padding: 10px 0; }
   .site-logo {
     padding: 20px 0; }
-  #carousel .pager {
+  #carousel .slick-dots {
     right: -9px;
-    top: -5px;
+    top: 20px;
     padding: 0; }
   .b-product {
     padding: 15px 0 15px 16px; }
