@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+.b-water-world {
+    margin: 30px auto;
+    width: 560px;
+    height: 440px;
+    background-color: #80cdc6;
+    position: relative;
+    overflow: hidden;
+}
+.b-water-world img {
+    position: absolute;
+}
+.b-clouds {
+    width: 62%;
+    right: -4px;
+    top: -6px;
+}
+.b-wooden-ship {
+    width: 116px;
+    bottom: 39px;
+    left: 13px;
+    z-index: 2;
+}
+.b-water {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+.b-world {
+    bottom: 14px;
+    left: 0;
+    z-index: 1;
+}
