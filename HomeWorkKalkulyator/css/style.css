@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: #6e9c9e;
+    line-height: 1em;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+.b-kalkulyator {
+    margin: 30px auto;
+    width: 260px;
+    height: 400px;
+    border: 3px solid #6e9c9e;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.b-kalkulyator__name {
+    color: #fff;
+    background: #6e9c9e;
+    text-align: right;
+    padding: 10px;
+    margin: 10px 0 4px;
+}
+.b-kalkulyator form {
+    padding: 5px;
+}
+.b-btn__wrap {
+    position: relative;
+    margin-left: 2px;
+}
+
+.b-kalkulyator input[name="calc"] {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #6e9c9e;
+    border: 3px solid #6e9c9e;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-align: right;
+}
+.b-battery__wrap {
+    text-align: right;
+    padding-right: 5px;
+    margin-bottom: 12px;
+}
+.b-battery {
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    background: #6e9c9e;
+}
+.b-btn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: #fff;
+    color: #6e9c9e;
+    font-size: 18px;
+    font-weight: 700;
+    border: 3px solid #6e9c9e;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.b-btn:hover,
+.b-btn:active,
+.b-btn:focus {
+    color: #fff;
+    background: #6e9c9e;
+}
+.b-btn__7 {
+    top: 0;
+    left: 5px;
+}
+.b-btn__8 {
+    top: 0;
+    left: 65px;
+}
+
+.b-btn__9 {
+    top: 0;
+    left: 125px;
+}
+.b-btn__plus {
+    top: 0;
+    left: 185px;
+}
+.b-btn__4 {
+    top: 60px;
+    left: 5px;
+}
+.b-btn__5 {
+    top: 60px;
+    left: 65px;
+}
+.b-btn__6 {
+    top: 60px;
+    left: 125px;
+}
+.b-btn__minus {
+    top: 60px;
+    left: 185px;
+}
+.b-btn__1 {
+    top: 125px;
+    left: 5px;
+}
+.b-btn__2 {
+    top: 125px;
+    left: 65px;
+}
+.b-btn__3 {
+    top: 125px;
+    left: 125px;
+}
+.b-btn__sl {
+    top: 125px;
+    left: 185px;
+}
+.b-btn__koma {
+    top: 190px;
+    left: 5px;
+}
+
+.b-btn__0 {
+    top: 190px;
+    left: 65px;
+}
+
+.b-btn__ravno {
+    top: 190px;
+    left: 125px;
+}
+
+.b-btn__mult {
+    top: 190px;
+    left: 185px;
+}
